@@ -1,0 +1,22 @@
+<view id="myLogin">
+  <block wx:if='{{isLogin}}'>
+    <image id="myIcon" src="{{src}}"></image>
+    <text id="nickName">{{nickName}}</text>
+    <button bindtap="loginOut"  size="mini" >登出</button>
+  </block>
+  <button wx:else size="mini" open-type="getUserInfo" bindgetuserinfo="getMyInfo">未登录，点此登录</button>
+</view>
+<view id="myFavorites">
+  <view wx:if="{{isLogin}}">
+    <text>我的收藏({{num}})</text>
+    <view id="news-lsit">
+      <view class="list-item" wx:for="{{newsList}}" wx:for-item="news" wx:key="{{news.id}}">
+        <image src="{{news.poster}}"></image>
+        <text class="news-title" bindtap="goToDetail" data-id="{{news.id}}">♢{{news.title}}——{{news.add_date}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <text>我的收藏(0)</text>
+  </view>
+</view>

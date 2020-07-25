@@ -1,14 +1,37 @@
 {
-  "pages":[
+  "pages": [
+    
+    
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/nofound/nofound",
+    "pages/my/my",
+    "pages/detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    
+    "navigationBarBackgroundColor": "#328eeb",
+    "navigationBarTitleText": "校园资讯",
+    "navigationBarTextStyle": "white"
+    
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#32833b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"images/index.png",
+        "selectedIconPath":"images/index_blue1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath":"images/my.png",
+        "selectedIconPath":"images/my_blue.png",
+        "text": "我的"
+      }
+    ]
+  }
 }
